@@ -1,0 +1,23 @@
+public class HourlyEmployee extends Employee {
+    private double hourlyPayRate;
+
+    public HourlyEmployee(String name, String birthDate, long employeeId, String hireDate, double hourlyPayRate) {
+        super(name, birthDate, employeeId, hireDate);
+        this.hourlyPayRate = hourlyPayRate;
+    }
+
+    public double getDoublePay(){
+        return this.hourlyPayRate*2;
+    }
+
+    @Override
+    public double collectPay() {
+        return hourlyPayRate*40;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " hourlyPayRate=" + hourlyPayRate;
+
+    }
+}
